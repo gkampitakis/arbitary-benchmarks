@@ -1,7 +1,10 @@
 'use strict'
 
 const benchmark = require('benchmark');
+const { results, start } = require('../log');
 const suite = benchmark.Suite();
+
+start('Timer benches starting ...');
 
 function getTime () {
   const t = process.hrtime();
@@ -9,7 +12,7 @@ function getTime () {
   return Math.floor(t[0] * 1000 + t[1] / 1000000);
 }
 
-suite.add('Test Node Timer', function () { //Keep in mind this has higher accuracy
+suite.add('Test Node Timer', function () { //NOTE: Keep in mind this has higher accuracy
 
   getTime();
 
@@ -26,5 +29,5 @@ suite.on('cycle', cycle)
 suite.run()
 
 function cycle (e) {
-  console.log(e.target.toString())
+  results(e.target.toString());
 }

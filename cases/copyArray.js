@@ -1,7 +1,10 @@
 'use strict'
 
 const benchmark = require('benchmark');
+const { results, start } = require('../log');
 const suite = benchmark.Suite();
+
+start('Copy Array benches starting ...');
 
 const testArray = [];
 
@@ -59,5 +62,5 @@ suite.on('cycle', cycle)
 suite.run()
 
 function cycle (e) {
-  console.log(e.target.toString())
+  results(e.target.toString())
 }
