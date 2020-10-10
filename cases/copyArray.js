@@ -1,66 +1,52 @@
-'use strict'
+'use strict';
 
-const benchmark = require('benchmark');
-const { results, start } = require('../log');
-const suite = benchmark.Suite();
-
-start('Copy Array benches starting ...');
+const bench = require('../bennyWrapper');
 
 const testArray = [];
 
 for (let i = 0; i <= 10000; i++) {
-
   testArray.push(i);
-
 }
 
-suite.add('Loop', function () {
+bench('Copy Array', [
+  {
+    title: 'Loop',
+    fn: function () {
+      const newArray = [];
 
-  const newArray2 = [];
-
-  for (let i = 0; i < testArray.length; i++) {
-
-    newArray2.push(i);
-
+      for (let i = 0; i < testArray.length; i++) {
+        newArray.push(i);
+      }
+    }
+  },
+  {
+    title: 'Spread',
+    fn: function () {
+      [...testArray];
+    }
+  },
+  {
+    title: 'Slice',
+    fn: function () {
+      testArray.slice();
+    }
+  },
+  {
+    title: 'Concat',
+    fn: function () {
+      [].concat(testArray);
+    }
+  },
+  {
+    title: 'Map',
+    fn: function () {
+      testArray.map(i => i);
+    }
+  },
+  {
+    title: 'Array.From',
+    fn: function () {
+      Array.from(testArray);
+    }
   }
-
-
-});
-
-suite.add('Spread', function () {
-
-  const newArray = [...testArray];
-
-});
-
-suite.add('Slice', function () {
-
-  const newArray = testArray.slice();
-
-});
-
-suite.add('Concat', function () {
-
-  const newArray = [].concat(testArray);
-
-});
-
-suite.add('Map', function () {
-
-  const newArray = testArray.map(i => i);
-
-});
-
-suite.add('Array.From', function () {
-
-  const newArray = Array.from(testArray);
-
-});
-
-suite.on('cycle', cycle)
-
-suite.run()
-
-function cycle (e) {
-  results(e.target.toString())
-}
+]);

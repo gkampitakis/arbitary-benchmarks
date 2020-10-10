@@ -4,7 +4,8 @@
 	"description": "A repo testing uses cases by benchmarking",
 	"main": "index.js",
 	"scripts": {
-		"benchmark": "node cases/${npm_config_case:-timer}.js"
+		"benchmark": "node cases/${npm_config_case:-timer}.js",
+		"benchmark:all": "node cases/"
 	},
 	"repository": {
 		"type": "git",
@@ -20,9 +21,6 @@
 	},
 	"homepage": "https://github.com/gkampitakis/arbitary-benchmarks#readme",
 	"devDependencies": {
-		"benchmark": "^2.1.4"
-	},
-	"dependencies": {
-		"chalk": "^4.1.0"
+		"benny": "^3.6.14"
 	}
 }
