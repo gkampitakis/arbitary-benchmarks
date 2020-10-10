@@ -36,5 +36,5 @@ module.exports = suite(
 
   cycle(),
   complete(),
-  save({ file: 'allSettled', details: true, folder: './cases/promises-extension/results', format: 'chart.html' }),
+  save({ file: 'v1.allSettled', details: true, folder: './cases/promises-extension/results', format: 'chart.html' }),
 )

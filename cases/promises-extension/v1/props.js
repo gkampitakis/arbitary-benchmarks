@@ -54,5 +54,5 @@ module.exports = suite(
 
   cycle(),
   complete(),
-  save({ file: 'props', details: true, folder: './cases/promises-extension/results', format: 'chart.html' }),
+  save({ file: 'v1.props', details: true, folder: './cases/promises-extension/results', format: 'chart.html' }),
 )

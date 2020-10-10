@@ -36,5 +36,5 @@ module.exports = suite(
 
   cycle(),
   complete(),
-  save({ file: 'map', details: true, folder: './cases/promises-extension/results', format: 'chart.html' }),
+  save({ file: 'v1.map', details: true, folder: './cases/promises-extension/results', format: 'chart.html' }),
 )

@@ -28,5 +28,5 @@ module.exports = suite(
 
   cycle(),
   complete(),
-  save({ file: 'each', details: true, folder: './cases/promises-extension/results', format: 'chart.html' }),
+  save({ file: 'v1.each', details: true, folder: './cases/promises-extension/results', format: 'chart.html' }),
 )
