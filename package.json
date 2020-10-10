@@ -5,7 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"benchmark": "node cases/${npm_config_case:-timer}.js",
-		"benchmark:all": "node cases/"
+		"benchmark:all": "node cases/",
+		"benchmark:promises-v1": "node cases/promises-extension/v1"
 	},
 	"repository": {
 		"type": "git",
@@ -21,6 +22,8 @@
 	},
 	"homepage": "https://github.com/gkampitakis/arbitary-benchmarks#readme",
 	"devDependencies": {
-		"benny": "^3.6.14"
+		"benny": "^3.6.14",
+		"promises-extensionv1": "npm:promises-extension@^1.0.1",
+		"node-fetch": "^2.6.1"
 	}
 }
