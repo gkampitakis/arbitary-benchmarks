@@ -34,8 +34,11 @@ You can check the results in console or in `/results` directory.
 
 ### [Promises-extension](https://github.com/gkampitakis/promises-extension)
 
-- `npm run benchmark --case=promises-extension/v1/allSettled`
-- `npm run benchmark --case=promises-extension/v1/each`
-- `npm run benchmark --case=promises-extension/v1/map`
-- `npm run benchmark --case=promises-extension/v1/prop`
-- All of the above `npm run benchmark::promises-v1`
+There are two versions where you can change `*` with `v1` or `v2`.
+
+- `npm run benchmark --case=promises-extension/*/allSettled`
+- `npm run benchmark --case=promises-extension/*/each`
+- `npm run benchmark --case=promises-extension/*/map`
+- `npm run benchmark --case=promises-extension/*/prop`
+- All of the above `npm run benchmark::promises-*`
+

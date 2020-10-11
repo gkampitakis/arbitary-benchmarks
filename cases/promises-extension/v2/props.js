@@ -2,7 +2,7 @@
 
 const { suite, add, cycle, complete, save } = require('benny');
 const fetch = require('node-fetch');
-const { props } = require('promises-extensionv1').default;
+const { props } = require('promises-extensionv2');
 
 function delay (timeout, value) {
   return new Promise((resolve) => setTimeout(resolve(value), timeout));
@@ -51,5 +51,5 @@ module.exports = suite(
 
   cycle(),
   complete(),
-  save({ file: 'v1.props', details: true, folder: './cases/promises-extension/results', format: 'chart.html' }),
+  save({ file: 'v2.props', details: true, folder: './cases/promises-extension/results', format: 'chart.html' }),
 )
