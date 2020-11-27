@@ -2,7 +2,7 @@
 	"name": "arbitary-benchmarks",
 	"version": "1.0.0",
 	"description": "A repo testing uses cases by benchmarking",
-	"main": "index.js",
+  "main": "index.js",
 	"scripts": {
 		"benchmark": "node cases/${npm_config_case:-timer}.js",
 		"benchmark:all": "node cases/",
@@ -17,7 +17,7 @@
 		"benchmarks"
 	],
 	"author": "gkampitakis",
-	"license": "ISC",
+	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/gkampitakis/arbitary-benchmarks/issues"
 	},

@@ -1,5 +1,9 @@
 require('./checkObjectKey');
+require('./chunkArray');
+require('./isArray');
+require('./isObject');
 require('./copyArray');
 require('./stringContains');
 require('./timer');
 require('./promiseAll');
+require('./isPrimitive');

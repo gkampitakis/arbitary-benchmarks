@@ -17,9 +17,64 @@ You can also run all the benchmark cases at once
 
 ## Results
 
-You can check the results in console or in `/results` directory.
+<details><summary>Scenarios</summary>
+<p>
 
-## Benchmarks 
+```bash
+# Check Object Key
+
+Fastest: In
+Slowest: hasOwnProperty
+
+# Copy Array
+
+Fastest: Slice
+Slowest: Map
+
+# String Contains
+
+Fastest: IndexOf
+Slowest: Match
+
+# Timer Contains
+
+Fastest: Test Date Timer
+Slowest: Test Node Timer
+
+# Promise All
+
+Fastest: Native Promise All(promise Array)
+Slowest: Loop Promise All(promise Array)
+
+# Chunk Array 
+
+Fastest: Chunk Array V2
+Slowest: Chunk Array V3
+
+# Is Array
+
+Fastest: Array Constructor> Object
+Slowest: Array to String> Array
+
+# Is Object
+
+Fastest: Object Constructor> Array
+Slowest: Object to String> Array
+
+#Is Primitive
+
+Fastest: Typeof
+Slowest: Regex
+
+```
+</p>
+</details>
+
+<br>
+
+You can also run them locally. check the results in console or in `/results` directory.
+
+## Benchmarks
 
 ### General Cases
 
@@ -41,4 +96,3 @@ There are two versions where you can change `*` with `v1` or `v2`.
 - `npm run benchmark --case=promises-extension/*/map`
 - `npm run benchmark --case=promises-extension/*/prop`
 - All of the above `npm run benchmark::promises-*`
-
