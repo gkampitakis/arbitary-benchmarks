@@ -96,3 +96,7 @@ There are two versions where you can change `*` with `v1` or `v2`.
 - `npm run benchmark --case=promises-extension/*/map`
 - `npm run benchmark --case=promises-extension/*/prop`
 - All of the above `npm run benchmark::promises-*`
+
+## Resources 
+
+If you are interested in more information about performance in JS a good starting point can be [MythBusters JS](https://mythbusters.js.org/#/)
